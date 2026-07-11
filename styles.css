@@ -832,3 +832,65 @@ img {
   border-color: rgba(94, 234, 212, 0.45);
   background: rgba(94, 234, 212, 0.08);
 }
+.cert-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 105px;
+  padding: 18px 20px;
+}
+
+.cert-item strong {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.cert-item span {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.clickable-cert {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.clickable-cert::after {
+  content: "View credential ↗";
+  display: inline-flex;
+  width: fit-content;
+  margin-top: auto;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  background: rgba(94, 234, 212, 0.08);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.clickable-cert:hover {
+  transform: translateY(-3px);
+  border-color: rgba(94, 234, 212, 0.45);
+  background: rgba(94, 234, 212, 0.07);
+}
+
+@media (max-width: 700px) {
+  .cert-list {
+    grid-template-columns: 1fr;
+  }
+}
