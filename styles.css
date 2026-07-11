@@ -894,3 +894,16 @@ img {
     grid-template-columns: 1fr;
   }
 }
+.certification-banner {
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.certification-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
